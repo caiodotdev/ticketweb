@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load form_utils %}
+{% block content %}
+    <h3 class="page-header">View ImagePack</h3>
+
+    <div class="row">
+        <div class="col-xs-4"> 
+ <div class="form-group"> 
+ <label>Url:</label> 
+
+{{ object.url }} 
+ </div> 
+ </div> 
+<div class="col-xs-4"> 
+ <div class="form-group"> 
+ <label>Pack:</label> 
+
+{{ object.pack }} 
+ </div> 
+ </div> 
+
+    </div>
+    <hr/>
+    <div id="actions" class="row">
+        <div class="col-md-12">
+            <a class="btn btn-primary" href="{% url 'IMAGEPACK_update' imagepack.pk %}">
+                Edit
+            </a>
+            <a href="{% url 'IMAGEPACK_list' %}" class="btn btn-default">Back</a>
+        </div>
+    </div>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#imagepack_link').addClass('active');
+        });
+    </script>
+{% endblock %}

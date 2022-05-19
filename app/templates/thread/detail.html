@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load form_utils %}
+{% block content %}
+    <h3 class="page-header">View Thread</h3>
+
+    <div class="row">
+        <div class="col-xs-4"> 
+ <div class="form-group"> 
+ <label>Title:</label> 
+
+{{ object.title }} 
+ </div> 
+ </div> 
+<div class="col-xs-4"> 
+ <div class="form-group"> 
+ <label>Description:</label> 
+
+{{ object.description }} 
+ </div> 
+ </div> 
+<div class="col-xs-4"> 
+ <div class="form-group"> 
+ <label>Type_tempo:</label> 
+
+{{ object.type_tempo }} 
+ </div> 
+ </div> 
+<div class="col-xs-4"> 
+ <div class="form-group"> 
+ <label>Time_tempo:</label> 
+
+{{ object.time_tempo }} 
+ </div> 
+ </div> 
+<div class="col-xs-4"> 
+ <div class="form-group"> 
+ <label>User:</label> 
+
+{{ object.user }} 
+ </div> 
+ </div> 
+<div class="col-xs-4"> 
+ <div class="form-group"> 
+ <label>Origin:</label> 
+
+{{ object.origin }} 
+ </div> 
+ </div> 
+<div class="col-xs-4"> 
+ <div class="form-group"> 
+ <label>Destination:</label> 
+
+{{ object.destination }} 
+ </div> 
+ </div> 
+<div class="col-xs-4"> 
+ <div class="form-group"> 
+ <label>Start_date:</label> 
+
+{{ object.start_date }} 
+ </div> 
+ </div> 
+<div class="col-xs-4"> 
+ <div class="form-group"> 
+ <label>End_date:</label> 
+
+{{ object.end_date }} 
+ </div> 
+ </div> 
+
+    </div>
+    <hr/>
+    <div id="actions" class="row">
+        <div class="col-md-12">
+            <a class="btn btn-primary" href="{% url 'THREAD_update' thread.pk %}">
+                Edit
+            </a>
+            <a href="{% url 'THREAD_list' %}" class="btn btn-default">Back</a>
+        </div>
+    </div>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#thread_link').addClass('active');
+        });
+    </script>
+{% endblock %}

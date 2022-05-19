@@ -1,0 +1,138 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load form_utils %}
+{% block content %}
+<h3 class="page-header">Add Thread</h3>
+
+<div class="row">
+    <div class="col-sm-12">
+        <form action="" method="post">
+            {% csrf_token %}
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div class="col-xs-12">
+                        <div class="form-group">
+                            <label>Title:</label>
+                            {{ form.title }}
+                        </div>
+                    </div>
+                    <div class="col-xs-12">
+                        <div class="form-group">
+                            <label>Description:</label>
+                            {{ form.description }}
+                        </div>
+                    </div>
+                    <div class="col-xs-12">
+                        <div class="form-group">
+                            <label>Type_tempo:</label>
+                            <!-- {{ form.type_tempo }} -->
+                            <select class="form-control" name="type_tempo" id="type_tempo">
+                                <option value="minute" selected>minute</option>
+                                <option value="hour">hour</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-xs-12">
+                        <div class="form-group">
+                            <label>Time_tempo:</label>
+                            {{ form.time_tempo }}
+                        </div>
+                    </div>
+                    <div class="col-xs-12">
+                        <div class="form-group">
+                            <label>User:</label>
+                            {{ form.user }}
+                        </div>
+                    </div>
+                    <div class="col-xs-12">
+                        <div class="form-group">
+                            <label>Origin:</label>
+                            <!-- {{ form.origin }} -->
+                            <select class="form-control" name="origin" id="origin">
+                                <option value="JPA" selected>JOAO PESSOA</option>
+                                <option value="CPV">CAMPINA GRANDE</option>
+                                <option value="REC">RECIFE</option>
+                                <option value="SAO">SAO PAULO</option>
+                                <option value="CWB">CURITIBA</option>
+                                <option value="FLN">FLORIANOPOLIS</option>
+                                <option value="GRU">SAO PAULO/Guarulhos</option>
+                                <option value="NAT">NATAL</option>
+                                <option value="POA">PORTO ALEGRE</option>
+                                <option value="RIO">RIO DE JANEIRO</option>
+                                <option value="SDU">RIO DE JANEIRO/Santos Dumont</option>
+                                <option value="SSA">SALVADOR</option>
+                                <option value="VIX">VITÓRIA</option>
+                                <option value="BEL">BELEM</option>
+                                <option value="VCP">CAMPINAS</option>
+                                <option value="CGH">SAO PAULO/Congonhas</option>
+                                <option value="FOR">FORTALEZA</option>
+                                <option value="MIA">MIAMI/USA</option>
+                                <option value="ORL">ORLANDO/USA</option>
+                                <option value="CUN">CANCUN/MEX</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-xs-12">
+                        <div class="form-group">
+                            <label>Destination:</label>
+                            <!-- {{ form.destination }} -->
+                            <select class="form-control" name="destination" id="destination">
+                                <option value="JPA" selected>JOAO PESSOA</option>
+                                <option value="CPV">CAMPINA GRANDE</option>
+                                <option value="REC">RECIFE</option>
+                                <option value="SAO">SAO PAULO</option>
+                                <option value="CWB">CURITIBA</option>
+                                <option value="FLN">FLORIANOPOLIS</option>
+                                <option value="GRU">SAO PAULO/Guarulhos</option>
+                                <option value="NAT">NATAL</option>
+                                <option value="POA">PORTO ALEGRE</option>
+                                <option value="RIO">RIO DE JANEIRO</option>
+                                <option value="SDU">RIO DE JANEIRO/Santos Dumont</option>
+                                <option value="SSA">SALVADOR</option>
+                                <option value="VIX">VITÓRIA</option>
+                                <option value="BEL">BELEM</option>
+                                <option value="VCP">CAMPINAS</option>
+                                <option value="CGH">SAO PAULO/Congonhas</option>
+                                <option value="FOR">FORTALEZA</option>
+                                <option value="MIA">MIAMI/USA</option>
+                                <option value="ORL">ORLANDO/USA</option>
+                                <option value="CUN">CANCUN/MEX</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-xs-12">
+                        <div class="form-group">
+                            <label>Start_date:</label>
+                            <input class="form-control datepicker" type="date" name="start_date" id="start_date" />
+                            <!-- {{ form.start_date }} -->
+                        </div>
+                    </div>
+                    <div class="col-xs-12">
+                        <div class="form-group">
+                            <label>End_date:</label>
+                            <input class="form-control datepicker" type="date" name="end_date" id="end_date" />
+                            <!-- {{ form.end_date }} -->
+                        </div>
+                    </div>
+
+                </div>
+                <div class="panel-footer">
+                    <div id="actions" class="row">
+                        <div class="col-md-12">
+                            <button id="btn_salvar" class="btn btn-primary" type="submit">
+                                Add Thread
+                            </button>
+                            <a href="{% url 'THREAD_list' %}" class="btn btn-default">Back</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#thread_link').addClass('active');
+    });
+</script>
+{% endblock %}

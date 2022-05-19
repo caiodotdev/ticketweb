@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load form_utils %}
+{% block content %}
+    <h3 class="page-header">Update Thread</h3>
+
+    <div class="row">
+        <div class="col-sm-12">
+            <form action="" method="post">
+                {% csrf_token %}
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <div class="col-xs-12"> 
+ <div class="form-group"> 
+ <label>Title:</label> 
+{{ form.title }} 
+ </div> 
+ </div> 
+<div class="col-xs-12"> 
+ <div class="form-group"> 
+ <label>Description:</label> 
+{{ form.description }} 
+ </div> 
+ </div> 
+<div class="col-xs-12"> 
+ <div class="form-group"> 
+ <label>Type_tempo:</label> 
+{{ form.type_tempo }} 
+ </div> 
+ </div> 
+<div class="col-xs-12"> 
+ <div class="form-group"> 
+ <label>Time_tempo:</label> 
+{{ form.time_tempo }} 
+ </div> 
+ </div> 
+<div class="col-xs-12"> 
+ <div class="form-group"> 
+ <label>User:</label> 
+{{ form.user }} 
+ </div> 
+ </div> 
+<div class="col-xs-12"> 
+ <div class="form-group"> 
+ <label>Origin:</label> 
+{{ form.origin }} 
+ </div> 
+ </div> 
+<div class="col-xs-12"> 
+ <div class="form-group"> 
+ <label>Destination:</label> 
+{{ form.destination }} 
+ </div> 
+ </div> 
+<div class="col-xs-12"> 
+ <div class="form-group"> 
+ <label>Start_date:</label> 
+{{ form.start_date }} 
+ </div> 
+ </div> 
+<div class="col-xs-12"> 
+ <div class="form-group"> 
+ <label>End_date:</label> 
+{{ form.end_date }} 
+ </div> 
+ </div> 
+
+                    </div>
+                    <div class="panel-footer">
+                        <div id="actions" class="row">
+                            <div class="col-md-12">
+                               <button id="btn_atualizar" class="btn btn-primary" type="submit">
+                                    Update
+                                </button>
+                                <a href="{% url 'THREAD_list' %}" class="btn btn-default">Back</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#thread_link').addClass('active');
+        });
+    </script>
+{% endblock %}

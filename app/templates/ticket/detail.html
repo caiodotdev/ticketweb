@@ -1,0 +1,108 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load form_utils %}
+{% block content %}
+    <h3 class="page-header">View Ticket</h3>
+
+    <div class="row">
+        <div class="col-xs-4"> 
+ <div class="form-group"> 
+ <label>Price_per_adult:</label> 
+
+{{ object.price_per_adult }} 
+ </div> 
+ </div> 
+<div class="col-xs-4"> 
+ <div class="form-group"> 
+ <label>Total_price_per_adult:</label> 
+
+{{ object.total_price_per_adult }} 
+ </div> 
+ </div> 
+<div class="col-xs-4"> 
+ <div class="form-group"> 
+ <label>Taxes:</label> 
+
+{{ object.taxes }} 
+ </div> 
+ </div> 
+<div class="col-xs-4"> 
+ <div class="form-group"> 
+ <label>Final_total_price:</label> 
+
+{{ object.final_total_price }} 
+ </div> 
+ </div> 
+<div class="col-xs-4"> 
+ <div class="form-group"> 
+ <label>Hour_leave:</label> 
+
+{{ object.hour_leave }} 
+ </div> 
+ </div> 
+<div class="col-xs-4"> 
+ <div class="form-group"> 
+ <label>Hour_arrive:</label> 
+
+{{ object.hour_arrive }} 
+ </div> 
+ </div> 
+<div class="col-xs-4"> 
+ <div class="form-group"> 
+ <label>Stops:</label> 
+
+{{ object.stops }} 
+ </div> 
+ </div> 
+<div class="col-xs-4"> 
+ <div class="form-group"> 
+ <label>Durations:</label> 
+
+{{ object.durations }} 
+ </div> 
+ </div> 
+<div class="col-xs-4"> 
+ <div class="form-group"> 
+ <label>Url:</label> 
+
+{{ object.url }} 
+ </div> 
+ </div> 
+<div class="col-xs-4"> 
+ <div class="form-group"> 
+ <label>Data_trip:</label> 
+
+{{ object.data_trip }} 
+ </div> 
+ </div> 
+<div class="col-xs-4"> 
+ <div class="form-group"> 
+ <label>Origin:</label> 
+
+{{ object.origin }} 
+ </div> 
+ </div> 
+<div class="col-xs-4"> 
+ <div class="form-group"> 
+ <label>Destination:</label> 
+
+{{ object.destination }} 
+ </div> 
+ </div> 
+
+    </div>
+    <hr/>
+    <div id="actions" class="row">
+        <div class="col-md-12">
+            <a class="btn btn-primary" href="{% url 'TICKET_update' ticket.pk %}">
+                Edit
+            </a>
+            <a href="{% url 'TICKET_list' %}" class="btn btn-default">Back</a>
+        </div>
+    </div>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#ticket_link').addClass('active');
+        });
+    </script>
+{% endblock %}

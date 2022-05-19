@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load form_utils %}
+{% block content %}
+    <h3 class="page-header">Update ImagePack</h3>
+
+    <div class="row">
+        <div class="col-sm-12">
+            <form action="" method="post">
+                {% csrf_token %}
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <div class="col-xs-12"> 
+ <div class="form-group"> 
+ <label>Url:</label> 
+{{ form.url }} 
+ </div> 
+ </div> 
+<div class="col-xs-12"> 
+ <div class="form-group"> 
+ <label>Pack:</label> 
+{{ form.pack }} 
+ </div> 
+ </div> 
+
+                    </div>
+                    <div class="panel-footer">
+                        <div id="actions" class="row">
+                            <div class="col-md-12">
+                               <button id="btn_atualizar" class="btn btn-primary" type="submit">
+                                    Update
+                                </button>
+                                <a href="{% url 'IMAGEPACK_list' %}" class="btn btn-default">Back</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#imagepack_link').addClass('active');
+        });
+    </script>
+{% endblock %}
