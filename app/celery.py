@@ -13,7 +13,7 @@ app.autodiscover_tasks()
 app.conf.beat_schedule = {
     'ticket-collect': {
         'task': 'app.tasks.run_threads',
-        'schedule': crontab(minute="*/5"),
+        'schedule': crontab(hour="*/20"),
     },
 }
 
