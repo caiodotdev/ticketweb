@@ -60,18 +60,28 @@ The following tools were used in building the project:
 - [Amazon S3 CDN](https://aws.amazon.com/)
 - [Heroku](https://www.heroku.com/)
 
-### Author
+### Authors
 ---
+
+<a href="#">
+ <img style="border-radius: 50%;" src="https://i.imgur.com/wQiCGdp.jpg" width="100px;" alt=""/></a>
+ <br />
+ <sub><b>Antonio Lúcio</b></sub></a> <a href="#" title="Antonio Lucio">🚀
+
+
+[![Linkedin Badge](https://img.shields.io/badge/-Antonio%20Lucio-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/antoniolcq/)](https://www.linkedin.com/in/antoniolcq/) 
+[![Hotmail Badge](https://img.shields.io/badge/antoniolucio_@hotmail.com-blue?style=flat-square&logo=mail.ru&logoColor=white&link=mailto:antoniolucio_@hotmail.com)](mailto:antoniolucio_@hotmail.com)
+
 
 <a href="#">
  <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/7137962?v=4" width="100px;" alt=""/></a>
  <br />
  <sub><b>Caio Marinho</b></sub></a> <a href="#" title="Caio Marinho">🚀
 
-Made with ❤️ by Caio Marinho 👋🏽 Get in touch!
-
 [![Linkedin Badge](https://img.shields.io/badge/-Caio%20Marinho-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/caiomarinho/)](https://www.linkedin.com/in/caiomarinho/) 
 [![Gmail Badge](https://img.shields.io/badge/-caiomarinho8@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:caiomarinho8@gmail.com)](mailto:caiomarinho8@gmail.com)
+
+Made with ❤️ by Antonio Lucio and Caio Marinho 👋🏽 Get in touch!
 
 
 ### Application Demo
